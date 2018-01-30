@@ -12,9 +12,10 @@ class CashRegister
     cost = price * quantity
     @total += cost
     @transaction << cost
-    
+
     while quantity > 0
-      @items << title      
+      @items << title
+      quantity -= 1
     end
   end
 
